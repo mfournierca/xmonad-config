@@ -24,9 +24,9 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                             , "-i", "<fc=#006000>Charged</fc>"
                            ] 50
              , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-             ]
+             , Run Com "dropbox" ["status"] "dropbox" 50]
 , sepChar = "%"
 , alignSep = "}{"
-, template = "%cpu% | %memory% * %swap% | %battery% | %eth0% }{ %CYOW% | <fc=#ee9a00>%date%</fc>"
+, template = "%cpu% | %memory% * %swap% | %battery% | %dropbox% | %eth0% }{ %CYOW% | <fc=#ee9a00>%date%</fc>"
 }
 
